@@ -1,0 +1,279 @@
+body
+    margin: 0
+    padding: 0
+    background: white
+
+*
+    box-sizing: border-box
+
+.header
+    background-color: #373c3f
+    color: white
+    padding: 12px 0
+    position: relative
+    z-index: 1
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: #373c3f
+        top: 0
+        left: 0
+        z-index: -1
+
+.header-container
+    max-width: 1200px
+    padding: 0
+    margin: 0 auto
+
+.header-row
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.header-mobile-heading,
+.header-burger
+    display: none
+
+.header-logo
+    width: 80px
+    img
+        display: block
+        width: 100%
+
+.header-nav--link
+    display: inline-block
+    color: white
+    text-decoration: none
+    text-transform: uppercase
+
+    &:not(:last-child)
+        margin-right: 40px
+
+
+.header-fon
+    width: 100%
+    height: auto
+    position: relative
+
+.section-container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0
+
+.content-1
+    position: absolute
+    top: 100px
+    font-size: 62px
+    line-height: 64px
+    color: #ffffff
+    font-family: "Lato"
+    font-weight: 700
+
+.content-2
+    position: absolute
+    top: 300px
+    font-size: 38px
+    line-height: 64px
+    color: #a6d6e0
+    font-family: "Lato"
+    font-weight: 700
+
+.three-picture
+    display: flex
+
+.wrapper
+     width: calc(100%/3)
+     text-align: center
+
+
+.images
+
+    width: 100%
+    height: auto
+
+
+.title
+    display: flex
+    justify-content: space-between
+.menu-logo
+    height: 100px
+
+.title-content-1
+    text-transform: uppercase
+
+.title-content-2
+    color: #cbccce
+    line-height: 0
+.sections
+    display: flex
+.left-section
+    width: 50%
+.right-section
+    width: 50%
+.left-header
+    background-color: #373c3f
+    padding: 10px
+.right-header
+    background-color: blue
+    padding: 10px
+.left-content-1,
+.right-content-1
+    display: flex
+    justify-content: space-between
+
+.container
+    max-width: 1200px
+    display: flex
+    justify-content: space-between
+    margin: 0 auto
+
+
+
+
+
+
+
+@media (max-width: 991px) and (min-width: 641px)
+
+    .header-nav--link
+        font-size: 12px
+        &:not(:last-child)
+            margin-right: 18px
+
+    .content-1
+       font-size: 50px
+       line-height: 50px
+
+
+    .content-2
+      top: 230px
+      font-size: 35px
+
+@media (max-width: 640px)
+
+    .header
+        padding: 0
+
+    .header-mobile-heading,
+    .header-burger
+        display: block
+
+    .header-logo
+        display: none
+
+
+    .header-mobile-heading
+        font-size: 24px
+
+    .header-nav
+        position: absolute
+        top: 100%
+        right: 0
+        background-color: #fff
+        padding-bottom: 5px
+        width: 250px
+        transition: all .3s ease
+        z-index: -2
+        transform: translateY(-101%)
+        &.active
+            transform: translateY(0)
+
+    .header-nav--link
+        display: block
+        padding: 18px 22px
+        border-bottom: 1px solid rgba(0,0,0,.2)
+        color: #444444
+        transition: all .3s ease
+        &:hover
+            background-color: #f5f5f5
+        &:not(:last-child)
+            margin-right: 0
+
+    .header-burger
+        height: 76px
+        width: 76px
+        border: none
+        background-color: rgba(0,0,0,.3)
+
+        position: relative
+
+        &::before, &::after,
+        span:before, span:after
+            content: ''
+            position: absolute
+            height: 4px
+            width: 40%
+            background-color: white
+            left: 30%  
+            transition: all .3s ease
+
+        span:before, span:after
+            top: 50%
+            margin-top: -2px
+        &::before      
+            top: 27px    
+        &::after
+            bottom: 27px  
+
+        &.active
+            &::before, &::after
+                opacity: 0   
+            span:before
+                transform: rotate(45deg)
+            span:after
+                transform: rotate(-45deg)
+    .content-1
+         top: 80px
+         font-size: 30px
+         line-height: 40px
+
+
+    .content-2
+        top: 160px
+        font-size: 25px
+
+    .menu-logo
+        display: none
+
+    .section-content
+        margin: 0 auto
+    .sections
+        display: block
+    .left-section,
+    .right-section
+        width: 100%
+    .footer-logo
+        display: none
+
+@media (max-width: 320px)
+
+    .header-mobile-heading
+        font-size: 18px
+
+    .header-burger
+        width: 36px
+        height: 36px
+
+    .header-nav
+        width: 180px
+    
+    .header-nav--link
+        padding: 10px 14px
+
+    .content-1
+        top: 40px
+        font-size: 15px
+        line-height: 20px
+
+
+    .content-2
+        top: 70px
+        font-size: 10px
+
+    .menu-logo
+        display: none
+
+    .footer-logo
+        display: none
